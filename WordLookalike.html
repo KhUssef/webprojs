@@ -8,16 +8,18 @@
     <style>
         #colorInput{
             width: 150px;
-            height : 17px;
-            border-style: hidden;
+            height : 22px;
+            display:inline-table;
         }
         #sizeInput{
             width: 150px;
             height : 17px;
+            display:inline-table;
         }
         #fontSelect{
             width: 150px;
-            height : 22px;
+            height : 50px;
+            display:inline-table;
         }
     </style>
 </head>
@@ -28,11 +30,11 @@
     </p> 
     <div>
         <label for="colorInput">Color:</label>
-        <input type="color" id="colorInput" onchange="changeColor()">
+        <input type="color" class="form-control form-control-color" id="colorInput" onchange="changeColor()">
         <label for="sizeInput">Size:</label>
-        <input type="number" id="sizeInput" min="1" max="100" onchange="changeSize()">
+        <input type="number"class="form-control form-control-number" id="sizeInput" min="1" max="100"onchange="changeSize()">
         <label for="fontSelect">Font:</label>
-        <select id="fontSelect" onchange="changeFont()">
+        <select id="fontSelect" class="form-control form-control-select" onchange="changeFont()">
             <option value="Arial">Arial</option>
             <option value="Garamond">Garamond</option>
             <option value="Verdana">Verdana</option>
