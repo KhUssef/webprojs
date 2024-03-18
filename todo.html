@@ -1,42 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <title>Todo Manager</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .todo-list {
-            width: 300px;
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .todo-item {
-            margin-bottom: 10px;
-        }
-
-        .todo-item input[type="checkbox"] {
-            margin-right: 10px;
-        }
         #welcome{
             text-align: justify;
-            color:black;
+            border-width: 2px;
         }
     </style>
 </head>
@@ -47,24 +19,23 @@
     </div>
     <div class="row">
         <div class="col-lg-6" id="list">
-            <ul id="todoItems">
-            </ul>
+            <div id="todoItems">
+            </div>
         </div>
         <div class="col-lg-3" id="adding">
             <form id="todoForm">
                 <div>
                     <label for="nameInput">Name:</label>
-                    <input type="text" id="nameInput" required class="form-control form-control-text">
+                    <input type="text" id="nameInput"  class="form-control form-control-text">
                 </div>
                 <div>
                     <label for="descriptionInput">Description:</label>
-                    <input type="text" id="descriptionInput" required class="form-control form-control-text">
+                    <input type="text" id="descriptionInput"  class="form-control form-control-text">
                 </div>
                 <button type="submit" class="btn btn-primary">Add Todo</button>
             </form>
         </div>
         <div class="col-lg-3"></div>
     </div>
-
     <script src="todoScript.js"></script>
 </body>

@@ -16,8 +16,13 @@ function startgame(dif) {
     }
     Act(mini, maxi, att);
 }
+/**
+ * create
+ * @param {*} content 
+ * @returns 
+ */
 function createLi(content) {
-    return `<div class="row"><div class="col p-3 "></div><div class="col p-3 "><div class="alert alert-info"><strong>content</strong> </div></div><div class="col p-3 "></div></div>`;
+    return `<div class="row"><div class="col p-3 "></div><div class="col p-2 "><div class="alert alert-info"><strong>${content}</strong> </div></div><div class="col p-4 "></div></div>`;
   }
 function Act(mini, maxi, att) {
     
@@ -37,7 +42,7 @@ function Act(mini, maxi, att) {
         if (parsedGuess === num) {
             alert(`Congratulations! You guessed the number ${num} correctly.`);
             ull.innerHTML+=createLi(`the number was ${num} `);
-            reset1.innerHTML+=`<button type="button" class = "btn btn-secondary" onclick="reset()"> reset</button>`;
+            reset1.innerHTML=`<button type="button" class = "btn btn-secondary" onclick="reset()"> reset</button>`;
             return;
         } else if (parsedGuess < num) {
             alert(`Try a higher number ${num}`);
@@ -47,9 +52,9 @@ function Act(mini, maxi, att) {
             ull.innerHTML+=createLi(`the number is higher than ${num} `);
         }
     }
-    reset1.innerHTML+=`<button type="button" class = "btn btn-secondary" onclick="reset()"> reset</button>`;
+    reset1.innerHTML =`<button type="button" class = "btn btn-secondary" onclick="reset()"> reset</button>`;
 
-    alert(`Sorry, you've used all ${maxAttempts} attempts. The correct number was ${num}.`);
+    alert(`Sorry, you've used all attempts. The correct number was ${num}.`);
 }
 function reset(){
     ull.innerHTML="";
