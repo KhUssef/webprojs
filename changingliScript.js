@@ -10,3 +10,6 @@ function getRandomColor() {
     color += `${(Math.random()*255)})`;
     return color;
 }
+document.querySelector('#linkList').addEventListener('click', e=>{
+    changeColor(e.target);
+})

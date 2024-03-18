@@ -16,6 +16,9 @@ function startgame(dif) {
     }
     Act(mini, maxi, att);
 }
+document.querySelector("#btns").addEventListener('click', e=>{
+    startgame(e.target.id);
+})
 /**
  * create
  * @param {*} content 
@@ -28,7 +31,7 @@ function Act(mini, maxi, att) {
     
     let num = Math.floor((Math.random() * (maxi - mini + 1)) + mini)
     while (att--) {
-        let guess = prompt(`Enter your guess (${mini} - ${maxi}):`);
+        let guess = prompt(`Enter your guess (${mini} --- ${maxi}):`);
         if (guess === null) {
             alert('Game ended. You cancelled the game.');
             return;
